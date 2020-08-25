@@ -11,7 +11,8 @@ class App extends Component {
       <div className="App"> 
         <h1>Hi, I am React App.</h1>
         <p>This is really working!</p>
-        <Person />
+        <Person name="Yoonsoo" age = "30"> My hobbies : programming </Person>
+        <Person name= "Laura" age = "23"> My hobbies : Traphez </Person>
       </div>
       //<h1> another heading </h1> - we can't do this. only one root
     );

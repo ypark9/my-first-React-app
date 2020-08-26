@@ -3,16 +3,24 @@ import './App.css';
 import Person from './Person/Person'
 
 class App extends Component {
+  //props and state are core concept of React. 
+  //actually only changes in props and/or state trigger React to re-render 
+  // and update the DOM in the browser.
+  state = [
+    {name: "Yoonsoo", age : 36},
+    {name: "Laura", age : 29}
+  ]
+
   //react calles this method to render html to DOM
   render() {
-    return (
+      return (
       /////////JSX, not html (syntetic sugar)
       // class cannot be used because reserved in js.
       <div className="App"> 
         <h1>Hi, I am React App.</h1>
         <p>This is really working!</p>
-        <Person name="Yoonsoo" age = "30"> My hobbies : programming </Person>
-        <Person name= "Laura" age = "23"> My hobbies : Traphez </Person>
+        <Person name= {this.state[0].name} age = {this.state[0].age}> My hobbies : programming </Person>
+        <Person name= {this.state[1].name} age = {this.state[1].age}> My hobbies : Traphez </Person>
       </div>
       //<h1> another heading </h1> - we can't do this. only one root
     );

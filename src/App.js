@@ -11,6 +11,9 @@ class App extends Component {
     {name: "Laura", age : 29}
   ]
 
+  onClickHandler = function () {
+    console.log("was clicked!");
+  }
   //react calles this method to render html to DOM
   render() {
       return (
@@ -19,6 +22,7 @@ class App extends Component {
       <div className="App"> 
         <h1>Hi, I am React App.</h1>
         <p>This is really working!</p>
+        <button onClick = {this.onClickHandler}> Click me! </button>
         <Person name= {this.state[0].name} age = {this.state[0].age}> My hobbies : programming </Person>
         <Person name= {this.state[1].name} age = {this.state[1].age}> My hobbies : Traphez </Person>
       </div>
